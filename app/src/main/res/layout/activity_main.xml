@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="quote"
+            type="com.example.mvvmlearning_4_data_binding.Quote" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/quoteText"
+            android:textColor="#8338ec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{quote.quoteText}"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:textColor="#3a86ff"
+            android:id="@+id/quoteAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{quote.quoteAuthor}"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            android:textSize="24sp" />
+
+
+    </LinearLayout>
+</layout>
